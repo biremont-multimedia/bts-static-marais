@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    background-color: rgba(177, 142, 105, .2);
+    padding: 10px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 40px;
+}
+
+.main{
+    background-color: rgba(177, 142, 105, .2);
+    padding: 0 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.ctas-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta{
+    background-color: #B18E69;
+    padding: 10px 20px 10px;
+    outline: 2px solid #B18E69;
+    outline-offset: 2px;
+    border: none;
+    color: #FFFFFF;
+    margin: 40px 0 40px;
+    transition: .3s;
+}
+
+.cta a {
+    color: #FFFFFF;
+}
+
+.cta:hover{
+    background-color: #8f7252;
+    cursor: pointer;
+}
+
+.show-price{
+    color: #2a2424;
+    transition: .3s;
+}
+
+.show-price:hover{
+    color: #000000;
+}
+
+.img-section{
+    display: none;
+}
+
+.services-container{
+    background-color: #FFFFFF;
+    padding: 40px 10px;
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-container a{
+    margin: 10px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.img-service1{
+    width: 100%;
+    height: 125px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.titre-soin{
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 20px 0 20px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Début Menu Burger */
+.sidenav {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -100%;
+    background-color: rgba(177, 142, 105, 1);
+    padding-top: 200px;
+    transition: left 0.5s ease;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #2a2424;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #000000;
+    font-weight: 600;
+}
+
+.sidenav.active {
+    left: 0;
+    font-weight: 600;
+}
+
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.burger-icon {
+    font-size: 64px;
+    color: #000000;
+}
+/* Fin Menu Burger */
+
+h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+select{
+    background-color: transparent;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+h1{
+    font-weight: 600;
+}
+
+h1 .localisation{
+    font-weight: 900;
+}
+
+.appointment{
+    font-weight: 700;
+    margin: 0;
+}
+
+@media (min-width: 1160px) {
+    .logo{
+        height: 50px;
+    }
+
+    header{
+        padding: 40px 150px 0;
+    }
+
+    .main, .services-container{
+        padding: 40px 150px;
+    }
+
+    .burger-icon {
+        display: none;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        padding-top: 0;
+    }
+
+    .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #000000;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav .close{
+        display: none;
+    }
+
+    .ctas-container{
+        flex-direction: row;
+    }
+
+    .cta{
+        margin-right: 50px;
+    }
+
+    .img-section{
+        display: block;
+    }
+
+    .cards-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .cards-container a{
+        margin: 0;
+        width: calc(95% / 5);
+    }
+
+    .img-service1{
+        width: 100%;
+        height: 125px;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+    }
+    
+    .titre-soin{
+        background-color: #000000;
+        color: #FFFFFF;
+        width: 100%;
+        padding: 20px 0 20px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+}
